@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TYPE CONVERSION</title>
+  </head>
+  <body>
+    <h1>TYPE CONVERSION</h1>
+    <script>
+      const string1 = "50";
+      const string2 = NaN; // undefined, null
+
+      console.log(string1 + string2); // 50NaN
+
+      console.log(typeof NaN); // number
+
+      const sayi1 = Number(string1) + 15;
+
+      console.log(sayi1.toString(), typeof sayi1);
+      console.log(String(sayi1), typeof sayi1);
+
+      const sayi2 = +string1 + 15;
+      console.log(sayi2, typeof sayi2);
+
+      const string3 = "500a"; // undefined, null
+      console.log(Number(string3)) // NaN
+
+      const emptyString = ""; // bos veya sadece white spaceden olusan string ifadeler number a castleniginde 0 degerini verir.
+      console.log(Number(emptyString)); // 0
+
+      const s1 = 5;
+      const s2 = -7;
+      const name = "Ilker";
+      console.log(Boolean(s1));   // true
+      console.log(Boolean(s2));   // true
+      console.log(Boolean(name)); // true
+
+      // 0, null, undefined, NaN ve "" js tarafindan false olarak kabul edilir. Diger degerler boolean a cevrildiginde true degerini alir.
+      // bu degerlere 'falsy values' da denir.
+
+      const s3 = 0;
+      const s4 = null;
+      const s5 = undefined;
+      const s6 = NaN;
+      const s7 = "";
+
+      console.log(Boolean(s3)); // false 
+      console.log(Boolean(s4)); // false
+      console.log(Boolean(s5)); // false
+      console.log(Boolean(s6)); // false
+      console.log(Boolean(s7)); // false
+      
+
+
+
+    </script>
+  </body>
+</html>
